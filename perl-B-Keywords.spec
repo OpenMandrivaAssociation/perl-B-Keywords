@@ -13,7 +13,6 @@ Url:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/B/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
 BuildArch:  noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 B::Keywords supplies seven arrays of keywords: @Scalars, @Arrays,
