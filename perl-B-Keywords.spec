@@ -1,19 +1,18 @@
-%define	module	B-Keywords
-%define	name	perl-%{module}
-%define	version	1.09
-%define	release	%mkrel 1
+%define	upstream_name	 B-Keywords
+%define	upstream_version 1.09
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:	Lists of reserved barewords and symbol names
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/B/%{module}-%{version}.tar.bz2
-Buildrequires:	perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:  noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 B::Keywords supplies seven arrays of keywords: @Scalars, @Arrays,
@@ -25,7 +24,7 @@ non-function keywords and operators to the @Functions array.
 All additions and modifications are welcome.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -45,5 +44,3 @@ rm -rf %{buildroot}
 %doc Changes README LICENSE
 %{perl_vendorlib}/B
 %{_mandir}/man*/*
-
-
