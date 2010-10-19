@@ -1,5 +1,5 @@
 %define	upstream_name	 B-Keywords
-%define	upstream_version 1.09
+%define	upstream_version 1.10
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Lists of reserved barewords and symbol names
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
