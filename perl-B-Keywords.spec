@@ -1,9 +1,9 @@
 %define	upstream_name	 B-Keywords
-%define	upstream_version 1.10
+%define	upstream_version 1.12
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 
 Summary:	Lists of reserved barewords and symbol names
 License:	GPL+ or Artistic
