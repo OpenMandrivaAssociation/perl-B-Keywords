@@ -1,17 +1,14 @@
-%define	upstream_name	 B-Keywords
+%define upstream_name B-Keywords
 %define upstream_version 1.18
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
-
+Release:	4
 Summary:	Lists of reserved barewords and symbol names
-
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
-
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test)
@@ -27,7 +24,7 @@ non-function keywords and operators to the @Functions array.
 All additions and modifications are welcome.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -n %{upstream_name}-%{upstream_version} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -36,9 +33,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README LICENSE
 %{perl_vendorlib}/B
-%{_mandir}/man*/*
+%doc %{_mandir}/man*/*
