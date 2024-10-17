@@ -7,7 +7,7 @@ Release:	2
 Summary:	Lists of reserved barewords and symbol names
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
