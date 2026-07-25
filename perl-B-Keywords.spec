@@ -1,14 +1,14 @@
 %define upstream_name B-Keywords
-%define upstream_version 1.23
+%define upstream_version 1.29
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%{upstream_version}
+Release:	1
 Summary:	Lists of reserved barewords and symbol names
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Keywords-%{upstream_version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
