@@ -7,7 +7,7 @@ Release:	1
 Summary:	Lists of reserved barewords and symbol names
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://metacpan.org/dist/%{upstream_name}
+Url:		https://github.com/rurban/b-keywords
 Source0:	https://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Keywords-%{upstream_version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl-devel
